@@ -3,7 +3,7 @@
 // import Link from 'next/link';
 // import Image from 'next/image';
 // import { useState } from 'react';
-// import { Menu, X } from 'lucide-react';
+// // import { Menu, X } from 'lucide-react';
 // import { TapeButton } from '../ui/TapeButton';
 
 // export function Navbar() {
@@ -82,7 +82,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+// import { Menu, X } from 'lucide-react';
 import { TapeButton } from '../ui/TapeButton';
 
 export function Navbar() {
@@ -98,13 +98,13 @@ export function Navbar() {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pointer-events-none">
             {/* Logo - fixed top-left */}
-            <div className="fixed top-4 left-4 z-50 pointer-events-auto">
+            <div className="fixed top-0 left-0 z-50 pointer-events-auto">
                 <Link href="/" className="block w-24 h-24" onClick={() => setIsMenuOpen(false)}>
                     <Image
-                        src="/assets/logo.png" // keep your logo in public/assets/logo.png or adjust path
+                        src="/assets/logo-v2.png" // keep your logo in public/assets/logo.png or adjust path
                         alt="Her Treat Collective"
-                        width={96}
-                        height={96}
+                        width={150}
+                        height={150}
                         className="object-contain"
                         priority
                     />
@@ -132,9 +132,17 @@ export function Navbar() {
                     aria-expanded={isMenuOpen}
                     aria-label="Toggle menu"
                     style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 99999 }}
-                    className="p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-50 transition-colors border border-gray-100"
+                    className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-50 transition-colors border border-gray-100"
                 >
-                    {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    {isMenuOpen ? (
+                        <div className="relative w-8 h-8">
+                            <Image src="/assets/cake-v2.png" alt="Close menu" fill className="object-contain" />
+                        </div>
+                    ) : (
+                        <div className="relative w-8 h-8">
+                            <Image src="/assets/hamburger-v2.png" alt="Open menu" fill className="object-contain" />
+                        </div>
+                    )}
                 </button>
             </div>
 
