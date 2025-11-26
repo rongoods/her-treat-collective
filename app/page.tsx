@@ -1,65 +1,115 @@
-import Image from "next/image";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { TapeButton } from "@/components/ui/TapeButton";
+import { TornPaper } from "@/components/ui/TornPaper";
+import { Polaroid } from "@/components/ui/Polaroid";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10">
+              <h1 className="font-display text-6xl md:text-8xl mb-6 leading-tight">
+                She shares <br />
+                <span className="relative inline-block">
+                  what she saves.
+                  <svg className="absolute w-full h-4 -bottom-2 left-0 text-pink-500" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                  </svg>
+                </span>
+              </h1>
+              <p className="font-sans text-xl md:text-2xl mb-8 max-w-md transform -rotate-1">
+                A collective for connection, empowerment, and joy. Join us for our next treat.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <TapeButton text="Join an Event" href="/events" variant="washi" />
+                <TapeButton text="Support Us" href="/donate" variant="clear" />
+              </div>
+            </div>
+
+            <div className="relative h-[500px] w-full hidden md:block">
+              {/* Decorative Collage Elements */}
+              <div className="absolute top-10 right-10 rotate-3 z-10">
+                <Polaroid
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                  alt="Her Treat Event"
+                  caption="Summer 2024"
+                  rotation={3}
+                  className="w-72"
+                />
+              </div>
+              <div className="absolute top-40 left-10 -rotate-6 z-0">
+                <Polaroid
+                  src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+                  alt="Joy"
+                  rotation={-6}
+                  className="w-64"
+                />
+              </div>
+              {/* Tape decorations */}
+              <div className="absolute top-0 right-32 w-32 h-8 bg-pink-300/50 rotate-45 mix-blend-multiply transform translate-y-4"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Highlight Section */}
+        <section className="py-20 bg-pink-50 relative">
+          {/* Torn edge top */}
+          <div className="absolute top-0 left-0 right-0 h-8 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 10%)' }}></div>
+
+          <div className="max-w-5xl mx-auto px-4">
+            <TornPaper className="bg-white transform rotate-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1">
+                  <span className="inline-block bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-bold mb-4 transform -rotate-2">Next Up</span>
+                  <h2 className="font-display text-4xl mb-4">Summer Solstice Picnic</h2>
+                  <p className="font-sans text-lg mb-6">
+                    Join us for an afternoon of sun, snacks, and sisterhood. Bring your favorite dish to share!
+                  </p>
+                  <TapeButton text="RSVP Now" href="/events/summer-solstice" variant="masking" />
+                </div>
+                <div className="order-1 md:order-2 flex justify-center">
+                  <Polaroid
+                    src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80"
+                    alt="Picnic"
+                    rotation={2}
+                    className="w-64"
+                  />
+                </div>
+              </div>
+            </TornPaper>
+          </div>
+        </section>
+
+        {/* Quick Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-display text-5xl text-center mb-16">Upcoming Treats</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="group">
+                  <Polaroid
+                    src={`https://images.unsplash.com/photo-${i === 1 ? '1626803775151-61d756612f97' : i === 2 ? '1558301211-0d8c8ddee6ec' : '1535141192574-5d4897c12636'}?auto=format&fit=crop&w=800&q=80`}
+                    alt={`Event ${i}`}
+                    caption={`Event Title ${i}`}
+                    rotation={i % 2 === 0 ? 2 : -2}
+                    className="w-full"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <TapeButton text="View All Events" href="/events" variant="clear" />
+            </div>
+          </div>
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
