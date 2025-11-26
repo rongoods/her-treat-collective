@@ -15,7 +15,7 @@ export default async function EventsPage() {
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-grow pt-32 px-4">
+            <main className="flex-grow pt-96 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h1 className="font-display text-6xl mb-6">All Treats</h1>

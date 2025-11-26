@@ -7,7 +7,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-grow pt-32 px-4">
+            <main className="flex-grow pt-96 px-4">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
                         <div className="relative">

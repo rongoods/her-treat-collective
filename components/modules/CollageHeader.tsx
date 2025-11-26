@@ -30,7 +30,7 @@ export function CollageHeader({ layers, className }: CollageHeaderProps) {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                     {layer.type === 'image' && layer.image && (
-                        <div className="relative w-64 h-64 md:w-96 md:h-96 shadow-lg">
+                        <div className="relative w-[60vw] aspect-square shadow-lg">
                             <Image
                                 src={urlFor(layer.image).width(800).url()}
                                 alt="Collage layer"
@@ -41,8 +41,8 @@ export function CollageHeader({ layers, className }: CollageHeaderProps) {
                     )}
 
                     {layer.type === 'polaroid' && layer.image && (
-                        <div className="bg-white p-3 pb-12 shadow-polaroid w-48 md:w-64">
-                            <div className="relative aspect-[4/5] w-full bg-gray-100">
+                        <div className="bg-white p-3 pb-12 shadow-polaroid w-[60vw]">
+                            <div className="relative aspect-[2/3] w-full bg-gray-100">
                                 <Image
                                     src={urlFor(layer.image).width(600).url()}
                                     alt="Polaroid layer"

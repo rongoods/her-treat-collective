@@ -21,7 +21,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
     }
 
     return (
-        <div className="min-h-screen flex flex-col bg-white">
+        <div className="min-h-screen flex flex-col bg-white pt-48">
             <Navbar />
 
             {/* Collage Header */}

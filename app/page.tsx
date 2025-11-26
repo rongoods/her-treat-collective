@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        <section className="relative pt-96 pb-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
               <h1 className="font-display text-6xl md:text-8xl mb-6 leading-tight">
@@ -40,7 +40,7 @@ export default function Home() {
                   alt="Her Treat Event"
                   caption="Summer 2024"
                   rotation={3}
-                  className="w-72"
+                  className="w-48"
                 />
               </div>
               <div className="absolute top-40 left-10 -rotate-6 z-0">
@@ -48,7 +48,7 @@ export default function Home() {
                   src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
                   alt="Joy"
                   rotation={-6}
-                  className="w-64"
+                  className="w-40"
                 />
               </div>
               {/* Tape decorations */}
@@ -78,7 +78,7 @@ export default function Home() {
                     src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80"
                     alt="Picnic"
                     rotation={2}
-                    className="w-64"
+                    className="w-40"
                   />
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
                     alt={`Event ${i}`}
                     caption={`Event Title ${i}`}
                     rotation={i % 2 === 0 ? 2 : -2}
-                    className="w-full"
+                    className="w-full max-w-[200px] mx-auto"
                   />
                 </div>
               ))}

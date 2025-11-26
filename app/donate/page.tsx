@@ -7,7 +7,7 @@ export default function DonatePage() {
     return (
         <div className="min-h-screen flex flex-col bg-pink-50/30">
             <Navbar />
-            <main className="flex-grow pt-32 px-4">
+            <main className="flex-grow pt-96 px-4">
                 <div className="max-w-3xl mx-auto">
                     <TornPaper className="bg-white text-center py-16">
                         <h1 className="font-display text-6xl mb-6">Support the Collective</h1>

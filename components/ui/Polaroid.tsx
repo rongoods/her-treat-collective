@@ -14,12 +14,12 @@ export function Polaroid({ src, alt, caption, rotation = 0, className, priority 
     return (
         <div
             className={cn(
-                "relative bg-white p-3 pb-12 shadow-polaroid transition-transform hover:scale-105 hover:z-10",
+                "relative bg-white p-3 pb-12 shadow-polaroid transition-transform hover:scale-105 hover:z-10 mx-auto",
                 className
             )}
             style={{ transform: `rotate(${rotation}deg)` }}
         >
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-100">
+            <div className="relative aspect-[2/3] w-[60vw] overflow-hidden bg-gray-100">
                 <Image
                     src={src}
                     alt={alt}
