@@ -99,7 +99,7 @@ export function Navbar() {
         <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pointer-events-none">
             {/* Logo - fixed top-left */}
             <div className="fixed top-0 left-0 z-50 pointer-events-auto">
-                <Link href="/" className="block w-24 h-24" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/" className="block w-[86px] h-[86px]" onClick={() => setIsMenuOpen(false)}>
                     <Image
                         src="/assets/logo-v2.png" // keep your logo in public/assets/logo.png or adjust path
                         alt="Her Treat Collective"

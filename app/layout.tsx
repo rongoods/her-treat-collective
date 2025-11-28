@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Anton, Shantell_Sans, Caveat } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -33,9 +35,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${shantellSans.variable} ${anton.variable} ${caveat.variable} antialiased bg-white text-black font-sans`}
+        className={`${shantellSans.variable} ${anton.variable} ${caveat.variable} antialiased bg-white text-black font-sans min-h-screen flex flex-col`}
       >
-        {children}
+        <Navbar />
+        <main className="flex-grow pb-10">
+          <div className="h-40" />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

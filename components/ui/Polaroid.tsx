@@ -19,7 +19,7 @@ export function Polaroid({ src, alt, caption, rotation = 0, className, priority 
             )}
             style={{ transform: `rotate(${rotation}deg)` }}
         >
-            <div className="relative aspect-[2/3] w-[60vw] overflow-hidden bg-gray-100">
+            <div className="relative aspect-[2/3] w-full overflow-hidden bg-gray-100">
                 <Image
                     src={src}
                     alt={alt}
