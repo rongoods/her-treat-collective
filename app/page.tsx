@@ -10,11 +10,11 @@ export default function Home() {
       <section className="relative pt-20 pb-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
-            <h1 className="font-display text-6xl md:text-8xl mb-6 leading-tight">
+            <h1 className="font-shadows text-6xl md:text-8xl mb-6 leading-tight text-pink">
               She shares <br />
               <span className="relative inline-block">
                 what she saves.
-                <svg className="absolute w-full h-4 -bottom-2 left-0 text-pink-500" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute w-full h-4 -bottom-2 left-0 text-pink" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                 </svg>
               </span>
@@ -48,13 +48,13 @@ export default function Home() {
               />
             </div>
             {/* Tape decorations */}
-            <div className="absolute top-0 right-32 w-32 h-8 bg-pink-300/50 rotate-45 mix-blend-multiply transform translate-y-4"></div>
+            <div className="absolute top-0 right-32 w-32 h-8 bg-pink-pale/50 rotate-45 mix-blend-multiply transform translate-y-4"></div>
           </div>
         </div>
       </section>
 
       {/* Highlight Section */}
-      <section className="py-20 bg-pink-50 relative">
+      <section className="py-20 bg-pink-pale/10 relative">
         {/* Torn edge top */}
         <div className="absolute top-0 left-0 right-0 h-8 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 10%)' }}></div>
 
@@ -62,8 +62,8 @@ export default function Home() {
           <TornPaper className="bg-white transform rotate-1">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
-                <span className="inline-block bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-bold mb-4 transform -rotate-2">Next Up</span>
-                <h2 className="font-display text-4xl mb-4">Summer Solstice Picnic</h2>
+                <span className="inline-block bg-pink-pale/20 text-pink px-3 py-1 rounded-full text-sm font-bold mb-4 transform -rotate-2">Next Up</span>
+                <h2 className="font-shadows text-4xl mb-4 text-pink">Summer Solstice Picnic</h2>
                 <p className="font-sans text-lg mb-6">
                   Join us for an afternoon of sun, snacks, and sisterhood. Bring your favorite dish to share!
                 </p>
@@ -85,7 +85,7 @@ export default function Home() {
       {/* Quick Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-5xl text-center mb-16">Upcoming Treats</h2>
+          <h2 className="font-shadows text-5xl text-center mb-16 text-pink">Upcoming Treats</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="group">

@@ -20,7 +20,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-                <h1 className="font-display text-6xl mb-8">Our Story</h1>
+                <h1 className="font-shadows text-6xl mb-8 text-pink">Our Story</h1>
                 <TornPaper className="bg-white transform rotate-1">
                     <div className="prose prose-lg font-sans">
                         <p>

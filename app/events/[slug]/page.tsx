@@ -31,9 +31,9 @@ export default async function EventPage({ params }: { params: { slug: string } }
                 <TornPaper className="bg-white mb-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="md:col-span-2">
-                            <h1 className="font-display text-5xl md:text-7xl mb-4">{event.title}</h1>
+                            <h1 className="font-shadows text-5xl md:text-7xl mb-4 text-pink">{event.title}</h1>
                             <div className="flex flex-wrap gap-4 mb-8 font-sans text-lg">
-                                <span className="bg-pink-100 px-3 py-1 rounded-sm transform -rotate-1">
+                                <span className="bg-pink-pale/20 px-3 py-1 rounded-sm transform -rotate-1">
                                     📅 {new Date(event.date).toLocaleDateString()}
                                 </span>
                                 <span className="bg-yellow-100 px-3 py-1 rounded-sm transform rotate-1">
@@ -71,8 +71,8 @@ export default async function EventPage({ params }: { params: { slug: string } }
 
                         {/* Sidebar / Gallery Preview */}
                         <div className="md:col-span-1 space-y-8">
-                            <div className="bg-pink-50 p-6 transform rotate-2">
-                                <h3 className="font-display text-2xl mb-4">Share</h3>
+                            <div className="bg-pink-pale/10 p-6 transform rotate-2">
+                                <h3 className="font-shadows text-2xl mb-4 text-pink">Share</h3>
                                 <div className="flex gap-2">
                                     <button className="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-110 transition-transform">FB</button>
                                     <button className="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-110 transition-transform">IG</button>

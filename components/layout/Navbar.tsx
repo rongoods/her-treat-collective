@@ -43,7 +43,7 @@
 //                     {/* Menu Toggle */}
 //                     <button
 //                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-//                         className="relative z-50 p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-50 transition-colors border border-gray-100"
+//                         className="relative z-50 p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-pale/20 transition-colors border border-gray-100"
 //                         aria-label="Toggle menu"
 //                     >
 //                         {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -54,14 +54,14 @@
 //                 {isMenuOpen && (
 //                     <div className="absolute top-24 right-0 w-64 bg-white shadow-xl p-6 rotate-1 border-2 border-gray-100 z-40">
 //                         {/* Tape effect on top */}
-//                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-pink-200/50 rotate-[-2deg] mix-blend-multiply pointer-events-none" />
+//                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-pink-pale/50 rotate-[-2deg] mix-blend-multiply pointer-events-none" />
 
 //                         <nav className="flex flex-col gap-4">
 //                             {links.map((link) => (
 //                                 <Link
 //                                     key={link.href}
 //                                     href={link.href}
-//                                     className="font-display text-2xl hover:text-pink-500 transition-colors border-b border-dashed border-gray-200 pb-2"
+//                                     className="font-shadows text-2xl hover:text-pink-light transition-colors border-b border-dashed border-gray-200 pb-2"
 //                                     onClick={() => setIsMenuOpen(false)}
 //                                 >
 //                                     {link.label}
@@ -123,7 +123,7 @@ export function Navbar() {
                     onClick={() => setIsMenuOpen((s) => !s)}
                     aria-expanded={isMenuOpen}
                     aria-label="Toggle menu"
-                    className="p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-50 transition-colors border border-gray-100"
+                    className="p-3 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-pale/20 transition-colors border border-gray-100"
                 >
                     {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button> */}
@@ -132,7 +132,8 @@ export function Navbar() {
                     aria-expanded={isMenuOpen}
                     aria-label="Toggle menu"
                     style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 99999 }}
-                    className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-50 transition-colors border border-gray-100"
+                    className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-pink-pale/20 transition-colors border border-gray-100"
+                // Toggle menu icon based on state
                 >
                     {isMenuOpen ? (
                         <div className="relative w-8 h-8">
@@ -160,14 +161,14 @@ export function Navbar() {
                 >
 
                     {/* decorative tape */}
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-pink-200/50 rotate-[-2deg] mix-blend-multiply pointer-events-none" />
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-pink-pale/50 rotate-[-2deg] mix-blend-multiply pointer-events-none" />
 
                     <nav className="flex flex-col gap-4">
                         {links.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="font-display text-2xl hover:text-pink-500 transition-colors border-b border-dashed border-gray-200 pb-2"
+                                className="font-shadows text-2xl hover:text-pink-light transition-colors border-b border-dashed border-gray-200 pb-2"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.label}

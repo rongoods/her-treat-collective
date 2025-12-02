@@ -1,6 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #FF4FA3;
+  --color-pink-light: #F57CA8;
+  --color-pink-pale: #FF8ECF;
+
+  --font-shadows: var(--font-shadows), cursive;
+  --font-display: var(--font-anton), sans-serif;
+  --font-script: var(--font-caveat), cursive;
+  --font-sans: var(--font-shantell-sans), sans-serif;
+
+  --rotate-1: 1deg;
+  --rotate-minus-1: -1deg;
+  --rotate-2: 2deg;
+  --rotate-minus-2: -2deg;
+  --rotate-3: 3deg;
+  --rotate-minus-3: -3deg;
+  --rotate-6: 6deg;
+  --rotate-minus-6: -6deg;
+}
 
 :root {
   --background: #ffffff;

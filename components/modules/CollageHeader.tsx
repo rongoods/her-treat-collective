@@ -54,7 +54,7 @@ export function CollageHeader({ layers, className }: CollageHeaderProps) {
                     )}
 
                     {layer.type === 'sticker' && layer.image && (
-                        <div className="relative w-32 h-32 md:w-48 md:h-48 drop-shadow-md hidden md:block">
+                        <div className="relative w-32 h-32 md:w-48 md:h-48 drop-shadow-[0_4px_6px_rgba(255,79,163,0.5)] hidden md:block">
                             <Image
                                 src={urlFor(layer.image).width(400).url()}
                                 alt="Sticker"
@@ -76,7 +76,7 @@ export function CollageHeader({ layers, className }: CollageHeaderProps) {
                     )}
 
                     {layer.type === 'text' && layer.text && (
-                        <div className="font-script text-2xl md:text-4xl text-pink-600 transform -rotate-6">
+                        <div className="font-script text-2xl md:text-4xl text-pink transform -rotate-6">
                             {layer.text}
                         </div>
                     )}

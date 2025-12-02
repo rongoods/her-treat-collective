@@ -9,11 +9,11 @@ interface TapeButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 }
 
 export function TapeButton({ text, href, variant = 'clear', className, ...props }: TapeButtonProps) {
-    const baseStyles = "relative inline-flex items-center justify-center px-8 py-3 font-bold text-black transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 rotate-[-1deg] hover:rotate-0 tape-clip";
+    const baseStyles = "relative inline-flex items-center justify-center px-8 py-3 font-bold text-black transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 rotate-[-1deg] hover:rotate-0 tape-clip";
 
     const variants = {
         clear: "bg-white/60 backdrop-blur-sm border-2 border-white/50 shadow-sm",
-        washi: "bg-pink-400/80 text-white shadow-md",
+        washi: "bg-pink-light/80 text-white shadow-md",
         masking: "bg-yellow-100/90 text-gray-800 shadow-sm border border-yellow-200/50",
     };
 

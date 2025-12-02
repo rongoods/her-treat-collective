@@ -21,6 +21,7 @@ const config: Config = {
                 sans: ["var(--font-shantell-sans)", "sans-serif"],
                 display: ["var(--font-anton)", "sans-serif"],
                 script: ["var(--font-caveat)", "cursive"], // Fallback for Playlist Script
+                shadows: ["var(--font-shadows)", "cursive"],
             },
             backgroundImage: {
                 'tape-clear': "url('/assets/tape-clear.png')", // Placeholder

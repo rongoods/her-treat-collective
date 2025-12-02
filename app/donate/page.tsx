@@ -10,7 +10,7 @@ export default function DonatePage() {
             <main className="flex-grow pt-96 px-4">
                 <div className="max-w-3xl mx-auto">
                     <TornPaper className="bg-white text-center py-16">
-                        <h1 className="font-display text-6xl mb-6">Support the Collective</h1>
+                        <h1 className="font-shadows text-6xl mb-6 text-pink">Support the Collective</h1>
                         <p className="font-sans text-xl mb-12 max-w-lg mx-auto">
                             Your contribution helps us create more treats, support more women, and build a stronger community.
                         </p>
@@ -19,9 +19,9 @@ export default function DonatePage() {
                             {[10, 25, 50].map((amount) => (
                                 <button
                                     key={amount}
-                                    className="group relative p-6 border-2 border-dashed border-gray-300 hover:border-pink-500 transition-colors rounded-lg"
+                                    className="group relative p-6 border-2 border-dashed border-gray-300 hover:border-pink transition-colors rounded-lg"
                                 >
-                                    <span className="font-display text-4xl block mb-2 group-hover:text-pink-500">€{amount}</span>
+                                    <span className="font-shadows text-4xl block mb-2 group-hover:text-pink-light">€{amount}</span>
                                     <span className="font-sans text-sm text-gray-500">One-time treat</span>
                                 </button>
                             ))}

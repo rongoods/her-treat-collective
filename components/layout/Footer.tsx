@@ -3,7 +3,7 @@ export function Footer() {
         <footer className="bg-white pt-20 pb-10 px-4 mt-20 border-t border-gray-100">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
-                    <h3 className="font-display text-2xl mb-4">Her Treat Collective</h3>
+                    <h3 className="font-shadows text-2xl mb-4 text-pink">Her Treat Collective</h3>
                     <p className="font-sans text-gray-600 max-w-xs">
                         She shares what she saves. A community for connection, empowerment, and joy.
                     </p>
@@ -11,10 +11,10 @@ export function Footer() {
                 <div>
                     <h4 className="font-bold mb-4">Links</h4>
                     <ul className="space-y-2 font-sans text-gray-600">
-                        <li><a href="/events" className="hover:text-pink-500">Events</a></li>
-                        <li><a href="/about" className="hover:text-pink-500">About Us</a></li>
-                        <li><a href="/donate" className="hover:text-pink-500">Donate</a></li>
-                        <li><a href="/contact" className="hover:text-pink-500">Contact</a></li>
+                        <li><a href="/events" className="hover:text-pink">Events</a></li>
+                        <li><a href="/about" className="hover:text-pink">About Us</a></li>
+                        <li><a href="/donate" className="hover:text-pink">Donate</a></li>
+                        <li><a href="/contact" className="hover:text-pink">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -24,7 +24,7 @@ export function Footer() {
                         <input
                             type="email"
                             placeholder="Your email"
-                            className="flex-1 px-4 py-2 border border-gray-200 rounded-sm focus:outline-none focus:border-pink-500 font-sans"
+                            className="flex-1 px-4 py-2 border border-gray-200 rounded-sm focus:outline-none focus:border-pink font-sans"
                         />
                         <button type="submit" className="bg-black text-white px-4 py-2 font-bold hover:bg-gray-800 transition-colors">
                             Join

@@ -14,7 +14,7 @@ export default async function EventsPage() {
     return (
         <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-                <h1 className="font-display text-6xl mb-6">All Treats</h1>
+                <h1 className="font-shadows text-6xl mb-6 text-pink">All Treats</h1>
                 <p className="font-sans text-xl max-w-2xl mx-auto">
                     Browse our upcoming and past events. Join us for connection and joy.
                 </p>
@@ -23,8 +23,8 @@ export default async function EventsPage() {
             {/* Filters (Placeholder) */}
             <div className="flex justify-center gap-4 mb-12 flex-wrap">
                 <button className="px-4 py-2 rounded-full bg-black text-white font-bold transform -rotate-1">All</button>
-                <button className="px-4 py-2 rounded-full bg-gray-100 hover:bg-pink-100 font-bold transform rotate-1 transition-colors">Upcoming</button>
-                <button className="px-4 py-2 rounded-full bg-gray-100 hover:bg-pink-100 font-bold transform -rotate-1 transition-colors">Past</button>
+                <button className="px-4 py-2 rounded-full bg-gray-100 hover:bg-pink-pale/20 font-bold transform rotate-1 transition-colors">Upcoming</button>
+                <button className="px-4 py-2 rounded-full bg-gray-100 hover:bg-pink-pale/20 font-bold transform -rotate-1 transition-colors">Past</button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -39,7 +39,7 @@ export default async function EventsPage() {
                                     rotation={index % 2 === 0 ? 1 : -1}
                                     className="w-full max-w-[403px] mx-auto"
                                 />
-                                <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 font-bold transform rotate-3 shadow-md">
+                                <div className="absolute top-4 right-4 bg-pink text-white px-3 py-1 font-bold transform rotate-3 shadow-md">
                                     {new Date(event.date).toLocaleDateString()}
                                 </div>
                             </div>
